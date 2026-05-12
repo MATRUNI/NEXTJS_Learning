@@ -1,6 +1,15 @@
+import { redirect } from 'next/navigation';
 import React from 'react'
-
-function Dashboard() {
+async function checkAuth() 
+{
+  return false;  
+}
+async function Dashboard() {
+  const isAuthenticate=await checkAuth();
+  if(!isAuthenticate)
+  {
+    redirect('/login')
+  }
   return (
     <div>Dashboard</div>
   )

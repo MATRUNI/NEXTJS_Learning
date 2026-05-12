@@ -1,8 +1,13 @@
+'use client'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 function page() {
+  const router=useRouter()
   return (
     <div>
+      <button onClick={()=>router.back()}>GO BACK</button>
+      <button onClick={()=>router.push('/')}>GO HOME</button>
         <h3>Products pages and all</h3>
         <ul>
             <li>Product 1</li>
