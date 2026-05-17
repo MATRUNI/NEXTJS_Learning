@@ -17,6 +17,8 @@ export default function RootLayout({ children }) {
             <Link href="/about">About</Link>
             <Link href="/admin">Admin</Link>
             <Link href="/login">Login</Link>
+            <Link href="/contactAction">Form</Link>
+            <Link href="/studentDetail">StudentForm</Link>
           </nav>
         </header>
         <h1>Header</h1>
