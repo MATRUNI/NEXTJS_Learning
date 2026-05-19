@@ -12,7 +12,7 @@ export async function PUT(request,{params})
         const db=await ConnectDB();
         await db.collection('students').updateOne(
             {_id: new ObjectId(param.id)},
-            {$set:{...body,updateedAt:new Data()}}
+            {$set:{...body,updatedAt:new Date()}}
         )
         return NextResponse.json({success:true,message:"updated"})
     } catch (error) {
